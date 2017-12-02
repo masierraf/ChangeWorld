@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Callbacks</title>
+</head>
+<body>
+    <div>
+        <h1 id="ttl">I'm sleeping.</h1>
+    </div>
+    <script>
+        const WAKEUP = 3000;
+        const SHOWER = 5000;
+        const WEAR = 2000;
+        const BREAKFAST = 1000;
+        const STUDY = 8000;
+
+        const $tittle = document.getElementById('ttl');
+
+        setTimeout(() => {
+            $tittle.textContent = 'Now is time to wake up...';
+            setTimeout(() => {
+                $tittle.textContent = "I'm gonna take a shower...";
+                setTimeout(() => {
+                    $tittle.textContent = 'It is time to dress me...';
+                    setTimeout(() => {
+                        $tittle.textContent = 'Now is time to take a breakfast...';
+                        setTimeout(() => {
+                            $tittle.textContent = 'I am here to study a litle bit seconds'; 
+                        }, STUDY);
+                    }, BREAKFAST);
+                }, WEAR);
+            }, SHOWER);
+        }, WAKEUP);
+    </script>
+</body>
+</html>
