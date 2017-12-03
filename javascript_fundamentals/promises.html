@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promises</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="ttl">I'm sleeping.</h1>
+    </div>
+    <script>
+        const WAKEUP = 3000;
+        const SHOWER = 5000;
+        const WEAR = 2000;
+        const BREAKFAST = 1000;
+        const STUDY = 8000;
+        const $tittle = document.getElementById('ttl');
+
+        function wakeup() {
+            let response = prompt('Will you wake up right now?: Yes - No');
+            return new Promise((answer, error) => {
+                if (response === 'Yes')
+                    answer("Now is time to wake up...")
+                else
+                    error("Still sleep");
+            });
+        }
+
+        function shower(text) {
+            $tittle.textContent = text;
+            let response = prompt('Will you shower right now?: Yes - No');
+            return new Promise((answer, error) => {
+                if (response === 'Yes')
+                    answer("I'm gonna take a shower...")
+                else
+                    error("lazy!")
+            });
+        }
+
+        function dressing(text) {
+            $tittle.textContent = text;
+
+            let response = prompt('Will you put your clothes right now?: Yes - No');
+            return new Promise((answer, error) => {
+                if (response === 'Yes')
+                    answer("It is time to dress me...")
+                else
+                    error("You cant not be naked on streets")
+            });
+        }
+
+        function breakfast(text) {
+            $tittle.textContent = text;
+
+            let response = prompt('Will you get a breakfast right now?: Yes - No');
+            return new Promise((answer, error) => {
+                if (response === 'Yes')
+                    answer("Now is time to take a breakfast...")
+                else
+                    error('It is necessary take a breakfast to be a good men/women')
+            });
+        }
+
+        function Studding(text) {
+            $tittle.textContent = text;
+
+            let response = prompt('Will you study right now?: Yes - No');
+            return new Promise((answer, error) => {
+                if (response === 'Yes')
+                    answer("I am here to study a litle bit seconds")
+                else
+                    error('You are so stupid')
+            });
+        }
+
+        function showError(text) {
+            $tittle.textContent = text;
+        }
+
+        function Done(text) {
+            $tittle.textContent = text;
+        }
+
+        wakeup()
+            .then(shower)
+            .then(dressing)
+            .then(breakfast)
+            .then(Studding)
+            .then(Done)
+            .catch(showError)
+            .catch(showError)
+            .catch(showError)
+            .catch(showError)
+            .catch(showError)
+    </script>
+</body>
+
+</html>
