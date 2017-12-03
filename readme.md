@@ -1,11 +1,11 @@
 # Change the world
-This is a repository where you can find some examples to learn a litle more of javascript's things 
+This is a repository where you can find some examples to learn a litle more of javascript's things.
 
-## things for you
+## Things for you
 
 - Fundamentals
-    - Callbacks
-    - Promises
+    - Callbacks.
+    - Promises.
 
 - React
 - React-native
