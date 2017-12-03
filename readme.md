@@ -4,8 +4,8 @@ This is a repository where you can find some examples to learn a litle more of j
 ## Things for you
 
 - Fundamentals
-    - Callbacks.
-    - Promises.
+    * Callbacks.
+    * Promises.
 
 - React
     - Coming soon
