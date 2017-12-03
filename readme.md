@@ -6,6 +6,11 @@ This is a repository where you can find some examples to learn a litle more of j
 - Fundamentals
     * Callbacks.
     * Promises.
+    * Recursive and Memorization Functions.
+    * Iterators
+    * Generators
+    * Immutability
+
 
 - React
     - Coming soon
