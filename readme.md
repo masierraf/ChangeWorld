@@ -4,9 +4,9 @@ This is a repository where you can find some examples to learn a litle more of j
 ## Things for you
 
 - Fundamentals
-    * Callbacks.
-    * Promises.
-    * Recursive and Memorization Functions.
+    * Callbacks
+    * Promises
+    * Recursive and Memorization Functions
     * Iterators
     * Generators
     * Immutability
